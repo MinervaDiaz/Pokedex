@@ -3,8 +3,79 @@
     width: 30vw;
     height: 40vw;
 }
+
+.idPokemon{
+    position:absolute;
+    color: rgb(255, 255, 255);
+    top:-1.1%;
+    /* left:79.5%; */
+    font-weight: normal;
+}
+.idPokemon0-9{
+    left:88%
+}
+.idPokemon10-99{
+    left:84%
+}
+.idPokemon100{
+    left:80%
+}
+.borderCard{
+    border: 1px solid rgb(226, 248, 83);
+}
+.tags{
+    position: absolute;
+    left: 15px;
+    top: 92%;
+    width: 8%;
+    color: white;
+    border-radius: 5px;
+}
+.titleCard{
+    position: absolute;
+    left: -4%;
+    top: -5%;
+    text-align: center;
+    width: 80%;
+    padding: 0px 7px 1px 7px;
+    background-color: black;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid rgb(210, 196, 43);
+}
+.titleCard-10letters{
+    font-size: 143%;
+}
+.titleCard-14letters{
+    font-size: 120%;
+}
+.titleCard-18Letters{
+    font-size: 111%;
+}
+.titleCard-19Letters{
+    width: 80%;
+    font-size: 110%;
+}
+.p3{
+    color: rgb(152, 152, 152);
+    position: absolute;
+    left: 61%;
+    top: 84%;
+    font-size: 85%;
+}
+.figureSize{ 
+    width: 100%;
+    height: 100%px;
+}
+.sizeImg{ 
+    margin-top:5%;
+    margin-bottom: 3%;
+    width: 100%;
+    height: 100%px;
+}
+/* ----------------------- Colors ------------------------------ */
 .agua-light{
-    background-color: rgba(67, 131, 131, 0.548);
+    background-color: rgba(51, 126, 126, 0.548);
 }
 .purple-light{
     background-color: rgba(146, 88, 158, 0.548);
@@ -22,8 +93,10 @@
     background-color: rgba(158, 89, 89, 0.548);
 }
 .black-light{
-    background-color: rgb(194, 255, 241);
+    background-color: rgba(98, 185, 165, 0.756);
 }
+
+
 .border-agua-light{
     border: 1px solid rgb(194, 255, 255);
 }
@@ -44,37 +117,4 @@
 }
 .border-black-light{
     border: 1px solid rgb(209, 209, 209);
-}
-.idPokemon{
-    position:absolute;
-    color: rgb(255, 255, 255);
-    top:-1.1%;
-    left:79.5%;
-    font-weight: normal;
-}
-.borderCard{
-    border: 1px solid rgb(226, 248, 83);
-}
-.tags{
-    position: absolute;
-    left: 15px;
-    top: 92%;
-    width: 8%;
-    color: white;
-    border-radius: 5px;
-}
-.title{
-    position: absolute;
-    left: -2%;
-    top: -2%;
-    padding: 1px 9px 5px 9px;
-    background-color: black;
-    border-radius: 10px;
-    border: 1px solid rgb(210, 196, 43);
-
-}
-.figureSize{
-    
-    width: 100%;
-    height: 100%px;
 }

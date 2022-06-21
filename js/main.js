@@ -1,7 +1,7 @@
 
-// if (window.performance.navigation.type == 1) {
-//       location.href = '../html/introScreen.html';
-// }
+if (window.performance.navigation.type == 1) {
+      location.href = '../html/introScreen.html';
+}
 var URI = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=90/'
 var URI2 = 'https://pokeapi.co/api/v2/pokemon/'
 
@@ -33,8 +33,6 @@ const btnClicked = (numero) => {
 }
 
 const createCards = (numInicio = 1, numFinal = 54) => {
-      
-      document.querySelector("#listado").innerHTML="";
 
     for(var i=numInicio;i<=numFinal;i++){
 
@@ -42,39 +40,40 @@ const createCards = (numInicio = 1, numFinal = 54) => {
         div.classList.add('column','is-2');
 
         let card = document.createElement('div');
-
-        let cardImage =  document.createElement("div");
-        cardImage.classList.add("card-image"/* ,'pt-1' */);
-
-        let figure = document.createElement("figure");
-
-        let cardContent= document.createElement("div");
-        cardContent.classList.add("card-content");
-    
-        let img = document.createElement("img");
-        img.classList.add('img')
-
-        let hTitle= document.createElement("h2");
-        hTitle.classList.add("is-4","title", "has-text-primary");
-
-        let p1 = document.createElement("p");
-        p1.classList.add('idPokemon');       
+        let hTitle= document.createElement("h2")
+        let p1 = document.createElement("p")   
+        let figure = document.createElement("figure")
+        let cardImage =  document.createElement("div")
+        cardImage.classList.add("card-image")
         
-        let p2 = document.createElement("p");
-        let p3 = document.createElement("p");
+        let cardContent= document.createElement("div")
+        cardContent.classList.add("card-content")
+    
+        let img = document.createElement("img")
+        img.classList.add('sizeImg')
+
+        let p2 = document.createElement("p")
+        let p3 = document.createElement("p")
         
         const fillCards = async () => {
             try {   
                   const infoPokemon = await fetch(URI2+[i])
                   const dataPokemon = await infoPokemon.json()
-                  console.log(dataPokemon)
-                  img.setAttribute("src",dataPokemon.sprites.other.home.front_default);
+                  //console.log(dataPokemon)
+                  img.setAttribute("src",dataPokemon.sprites.other.home.front_default)
 
                   card.classList.add('card','has-background-white',borderColor(dataPokemon.base_experience))
-                  figure.classList.add('image','is-square', bgColor(dataPokemon.base_experience)/* ,'figureSize' */);
-                  
-                  hTitle.innerText=dataPokemon.name;
-                  p1.innerHTML="#"+dataPokemon.id;
+                  figure.classList.add(bgColor(dataPokemon.base_experience))
+
+                  namePoke = dataPokemon.name
+                  hTitle.innerText=namePoke.charAt(0).toUpperCase()+namePoke.slice(1)
+                  hTitle.classList.add('is-4','titleCard',titleCard(namePoke.length), "has-text-primary")
+
+                  p1.classList.add('idPokemon', idPokemon(dataPokemon.id))
+                  p1.innerHTML="#"+dataPokemon.id
+                  p3.innerHTML=dataPokemon.base_experience+' EXP.🏹'
+                  p3.classList.add('p3')
+
             } catch (error) {
                   console.log(error)
                   hTitle.innerText='ERROR'
@@ -83,21 +82,22 @@ const createCards = (numInicio = 1, numFinal = 54) => {
             }
         }
         fillCards()
-        figure.append(img);
 
-        cardContent.append(p1);
-        cardContent.append(p2);
-        cardImage.append(figure);
-        cardContent.append(hTitle);
-        card.append(cardImage);
-        card.append(cardContent);
+        cardContent.append(hTitle)
+        figure.append(img)
+        cardImage.append(figure)
+        cardContent.append(p1)
+        cardContent.append(p2)
+        cardContent.append(p3)
+        
+        card.append(cardImage)
+        card.append(cardContent)
+        div.append(card)
 
-        div.append(card);
-        document.querySelector("#listado").append(div);
+        document.querySelector("#listado").append(div)
         
       //   card.addEventListener("click", popup)
-    };
-
+    }
 }
 
 const bgColor = colorNumber => {
@@ -126,30 +126,57 @@ const bgColor = colorNumber => {
       return colorBg
 }
 const borderColor = colorNumber => {
-      let colorBg
+      let borderColor
       if(colorNumber >= 0 && colorNumber < 50) {
-            colorBg = 'border-agua-light'
+            borderColor = 'border-agua-light'
       }
       else if(colorNumber >= 51 && colorNumber < 100) {
-            colorBg = 'border-purple-light'
+            borderColor = 'border-purple-light'
       }
       else if(colorNumber >= 101 && colorNumber < 150) {
-            colorBg = 'border-orange-light'
+            borderColor = 'border-orange-light'
       }
       else if(colorNumber >= 151 && colorNumber < 200) {
-            colorBg = 'border-green-light'
+            borderColor = 'border-green-light'
       }
       else if(colorNumber >= 201 && colorNumber < 300) {
-            colorBg = 'border-blue-light'
+            borderColor = 'border-blue-light'
       }
       else if(colorNumber >= 301 && colorNumber < 350) {
-            colorBg = 'border-red-light'
+            borderColor = 'border-red-light'
       }
       else{
-            colorBg = 'border-black-light'
+            borderColor = 'border-black-light'
       }
-      return colorBg
+      return borderColor
 }
+const idPokemon = (id) =>{
+      let positionId
 
+      if(id >= 1 && id <=9){
+            positionId = 'idPokemon0-9'
+      }
+      else if(id >= 10 && id <=99){
+            positionId = 'idPokemon10-99'
+      }
+      else{
+            positionId='idPokemon100'
+      }
+      return positionId
+}
+const titleCard = (nameLength) =>{
+      let classCss
 
+      if(nameLength <= 10) classCss= 'titleCard-10letters'
+
+      else if( nameLength<=14) {
+            classCss = 'titleCard-14letters'
+      }
+      else if ( nameLength<=18){
+            classCss = 'titleCard-18Letters'
+      }else{
+            classCss ='titleCard-19letters'
+      }
+      return classCss
+}
 createCards()
