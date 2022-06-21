@@ -1,0 +1,80 @@
+
+.modalSize{
+    width: 30vw;
+    height: 40vw;
+}
+.agua-light{
+    background-color: rgba(67, 131, 131, 0.548);
+}
+.purple-light{
+    background-color: rgba(146, 88, 158, 0.548);
+}
+.orange-light{
+    background-color: rgba(173, 130, 107, 0.548);
+}
+.green-light{
+    background-color: rgba(114, 161, 97, 0.548);
+}
+.blue-light{
+    background-color: rgba(109, 111, 165, 0.548);
+}
+.red-light{
+    background-color: rgba(158, 89, 89, 0.548);
+}
+.black-light{
+    background-color: rgb(194, 255, 241);
+}
+.border-agua-light{
+    border: 1px solid rgb(194, 255, 255);
+}
+.border-purple-light{
+    border: 1px solid  rgb(246, 200, 255);
+}
+.border-orange-light{
+    border: 1px solid  rgb(255, 212, 188);
+}
+.border-green-light{
+    border: 1px solid rgb(199, 255, 179);
+}
+.border-blue-light{
+    border: 1px solid rgb(202, 204, 255);
+}
+.border-red-light{
+    border: 1px solid rgb(255, 180, 180);
+}
+.border-black-light{
+    border: 1px solid rgb(209, 209, 209);
+}
+.idPokemon{
+    position:absolute;
+    color: rgb(255, 255, 255);
+    top:-1.1%;
+    left:79.5%;
+    font-weight: normal;
+}
+.borderCard{
+    border: 1px solid rgb(226, 248, 83);
+}
+.tags{
+    position: absolute;
+    left: 15px;
+    top: 92%;
+    width: 8%;
+    color: white;
+    border-radius: 5px;
+}
+.title{
+    position: absolute;
+    left: -2%;
+    top: -2%;
+    padding: 1px 9px 5px 9px;
+    background-color: black;
+    border-radius: 10px;
+    border: 1px solid rgb(210, 196, 43);
+
+}
+.figureSize{
+    
+    width: 100%;
+    height: 100%px;
+}
