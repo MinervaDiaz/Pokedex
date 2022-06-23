@@ -1,10 +1,15 @@
-
+.container-color{
+    background-color: rgb(255, 255, 255) !important;
+}
 .modalSize{
     width: 30vw;
     height: 40vw;
 }
 .is-color{
-    background-color: aqua;
+    background-color: #f76666dc !important;
+}
+.color-nav{
+    background-color: rgb(252, 170, 47) !important;
 }
 .idPokemon{
     position:absolute;
@@ -20,9 +25,6 @@
 }
 .idPokemon100{
     left:80%
-}
-.borderCard{
-    border: 1px solid rgb(226, 248, 83);
 }
 .tags{
     position: absolute;
@@ -42,7 +44,6 @@
     background-color: black;
     border-radius: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border: 1px solid rgb(210, 196, 43);
 }
 .titleCard-10letters{
     font-size: 143%;
@@ -74,6 +75,14 @@
     font-size: 79%;
     font-weight: light;
 }
+.p5{
+    color: rgb(0, 0, 0);
+    position: absolute;
+    right: 8%;
+    top: 84%;
+    font-size: 90%;
+    font-weight: light;
+}
 .figureSize{ 
     width: 100%;
     height: 100%px;
@@ -84,55 +93,56 @@
     width: 100%;
     height: 100%px;
 }
-.espada{
-    position: absolute;
-    left: 4%;
-    top: 86%;
-    width: 18;
-    height: 10%;
+.imgModal{ 
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+    width: 65%;
+    height: 65%px;
 }
 /* ----------------------- Colors ------------------------------ */
 .agua-light{
-    background-color: rgba(110, 186, 186, 0.897);
+    background-color: rgba(110, 186, 186, 0.897) !important;
 }
 .purple-light{
-    background-color: rgba(194, 144, 204, 0.897);
+    background-color: rgba(194, 144, 204, 0.897) !important;
 }
 .orange-light{
-    background-color: rgba(209, 178, 162, 0.897);
+    background-color: rgba(209, 178, 162, 0.897) !important;
 }
 .green-light{
-    background-color: rgba(156, 201, 139, 0.897);
+    background-color: rgba(156, 201, 139, 0.897) !important;
 }
 .blue-light{
-    background-color: rgba(152, 154, 201, 0.897);
+    background-color: rgba(152, 154, 201, 0.897) !important;
 }
 .red-light{
-    background-color: rgba(197, 144, 144, 0.897);
+    background-color: rgba(197, 144, 144, 0.897) !important;
 }
 .black-light{
-    background-color: rgba(120, 203, 184, 0.897);
+    background-color: rgba(120, 203, 184, 0.897) !important;
 }
 
 
 .border-agua-light{
-    border: 1px solid rgb(186, 255, 255);
+    border: 2px solid rgb(0, 255, 255, 0.623);
 }
 .border-purple-light{
-    border: 1px solid  rgb(249, 217, 255);
+    border: 2px solid  rgba(217, 0, 255, 0.514);
 }
 .border-orange-light{
-    border: 1px solid  rgb(247, 215, 199);
+    border: 2px solid  rgba(255, 216, 44, 0.514);
 }
 .border-green-light{
-    border: 1px solid rgb(219, 255, 205);
+    border: 2px solid rgb(72, 255, 0, 0.514);
 }
 .border-blue-light{
-    border: 1px solid rgb(220, 221, 255);
+    border: 2px solid rgb(0, 8, 255, 0.514);
 }
 .border-red-light{
-    border: 1px solid rgb(255, 220, 220);
+    border: 2px solid rgb(255, 1, 1, 0.514);
 }
 .border-black-light{
-    border: 1px solid rgb(223, 221, 221);
+    border: 2px solid rgb(73, 73, 73, 0.514);
 }

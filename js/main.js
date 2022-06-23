@@ -5,11 +5,17 @@
 var URI = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=90/'
 var URI2 = 'https://pokeapi.co/api/v2/pokemon/'
 
+window.onload = () => {
+      document.getElementById("delete").addEventListener("click", function () {
+            document.querySelector("#popup").classList.toggle("is-active");
+      });
+}
+
 document.querySelector("#search").addEventListener("keypress", function (evt) {
-      if(event.keyCode === 13){
+      if (event.keyCode === 13) {
             let pokemon = event.target.value
             //console.log(pokemon)
-            createCards(1,1, pokemon)
+            createCards(1, 1, pokemon)
       }
 });
 
@@ -71,28 +77,27 @@ const createCards = (numInicio = 1, numFinal = 54, namePokemon = '') => {
             let p4 = document.createElement("p")
             p4.classList.add('p4')
 
-            /* let espada = document.createElement('img')
-            espada.classList.add('espada')
-            espada.setAttribute('src','https://i.pinimg.com/originals/53/f7/34/53f7341cb281735cd89dc52dcd262d31.png') */
-
-           
-                  
+            let p5 = document.createElement("p")
+            p5.classList.add('p5')
 
             const fillCards = async () => {
-                  
+                  namePokemon = namePokemon.toLowerCase()
+
                   try {
-                        
-                        if(namePokemon.length != 0) {  
-                              url = URI2+namePokemon
+
+                        if (namePokemon.length != 0) {
+                              url = URI2 + namePokemon
                               btn_1.classList.remove('is-focused')
                               //buttons.classList.add('is-hidden')
-                        }else if(namePokemon.length == 0){
-                              url = URI2+[i]
+                        } else if (namePokemon.length == 0) {
+                              url = URI2 + [i]
                         }
-                        
+
                         const infoPokemon = await fetch(url)
                         const dataPokemon = await infoPokemon.json()
                         //console.log(dataPokemon)
+                        //console.log(dataPokemon.height)
+                        //console.log(dataPokemon.id)
                         img.setAttribute("src", dataPokemon.sprites.other.home.front_default)
 
                         card.classList.add('card', 'has-background-white', borderColor(dataPokemon.base_experience))
@@ -104,17 +109,28 @@ const createCards = (numInicio = 1, numFinal = 54, namePokemon = '') => {
 
                         p1.classList.add('idPokemon', idPokemon(dataPokemon.id))
                         p1.innerHTML = "#" + dataPokemon.id
-                        p3.innerHTML = '🧡' + dataPokemon.base_experience
+                        p3.innerHTML = '🎖️' + dataPokemon.base_experience
                         p3.classList.add('p3')
                         p4.innerHTML = 'EXP'
+                        //p5.innerHTML = `hg: ${dataPokemon.height}m`
 
+                        card.addEventListener("click", function () {
+                              titleNamePokemon = dataPokemon.name
+                              titleModal = titleNamePokemon.charAt(0).toUpperCase() + titleNamePokemon.slice(1)
+                              document.querySelector('#title').innerHTML = titleModal
+                              let modalHead = document.querySelector('#modalHead')
+                              modalHead.classList.add(bgColor(dataPokemon.base_experience))
+                              let imgPokemon = document.querySelector('#imgPokemon')
+                              imgPokemon.setAttribute('src', dataPokemon.sprites.other.home.front_shiny)
+                              document.querySelector("#popup").classList.toggle('is-active');
+                        })
 
                   } catch (error) {
                         console.log(error)
                         hTitle.innerText = 'ERROR 404 😢'
-                        hTitle.classList.add('has-text-white','is-5')
+                        hTitle.classList.add('has-text-white', 'is-5')
                         card.classList.add('has-background-danger')
-                        p2.classList.add('ml-3','p-1', 'has-text-white')
+                        p2.classList.add('ml-3', 'p-1', 'has-text-white')
                         p2.innerHTML = 'POKEMON NOT FOUND'
                   }
             }
@@ -127,6 +143,7 @@ const createCards = (numInicio = 1, numFinal = 54, namePokemon = '') => {
             cardContent.append(p2)
             cardContent.append(p3)
             cardContent.append(p4)
+            cardContent.append(p5)
             //cardContent.append(espada)
 
             card.append(cardImage)
@@ -135,12 +152,13 @@ const createCards = (numInicio = 1, numFinal = 54, namePokemon = '') => {
 
             document.querySelector("#listado").append(div)
 
-            //   card.addEventListener("click", popup)
+
       }
 }
 
 const bgColor = colorNumber => {
       let colorBg
+      
       if (colorNumber >= 0 && colorNumber < 50) {
             colorBg = 'agua-light'
       }
@@ -220,7 +238,7 @@ const titleCard = (nameLength) => {
 }
 createCards()
 
-callCreateCards =() =>{
+callCreateCards = () => {
       document.querySelector('#search').value = ('')
       createCards()
 }

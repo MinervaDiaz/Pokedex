@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <nav class="navbar is-warning is-flex is-justify-content-space-between">
+        <nav class="navbar color-nav is-flex is-justify-content-space-between">
             <div class="navbar-brand">
                 <div class="column">
                     <a href="#" onclick="callCreateCards()">
@@ -37,32 +37,52 @@
     </header>
     <main>
 
-        <section class="section">
+        <section class="section container-color">
             <div class="container">
                 <div class="columns is-multiline" id="listado">
                     
                 </div>
                 <div class="is-flex is-justify-content-center" id="buttons">
-                    <button class="button is-focused is-focused is-danger is-light has-text-dark" id="btn_1" onclick="btnClicked(1)">1</button>
-                    <button class="button ml-1 is-danger is-light has-text-dark" id="btn_2" onclick="btnClicked(2)">2</button>
-                    <button class="button ml-1 is-danger is-light has-text-dark" id="btn_3" onclick="btnClicked(3)">3</button>
-                    <button class="button ml-1 is-danger is-light has-text-dark" id="btn_4" onclick="btnClicked(4)">4</button>
-                    <button class="button ml-1 is-danger is-light has-text-dark" id="btn_5" onclick="btnClicked(5)">5</button>
-                    <button class="button ml-1 is-danger is-light has-text-dark" id="btn_6" onclick="btnClicked(6)">6</button>
-                    <button class="button ml-1 is-danger is-light has-text-dark" id="btn_6" onclick="btnClicked(7)">7</button>
-                    <button class="button ml-1 is-danger is-light has-text-dark" id="btn_6" onclick="btnClicked(8)">8</button>
-                    <button class="button ml-1 is-danger is-light has-text-dark" id="btn_6" onclick="btnClicked(9)">9</button>
-                    <button class="button ml-1 is-danger is-light has-text-dark" id="btn_6" onclick="btnClicked(10)">10</button>
-                    <button class="button ml-1 is-danger is-light has-text-dark" id="btn_6" onclick="btnClicked(11)">11</button>
-                    <button class="button ml-1 is-danger is-light has-text-dark" id="btn_6" onclick="btnClicked(12)">12</button>
-                    <button class="button ml-1 is-danger is-light has-text-dark" id="btn_6" onclick="btnClicked(13)">13</button>
-                    <button class="button ml-1 is-danger is-light has-text-dark" id="btn_6" onclick="btnClicked(14)">14</button>
-                    <button class="button ml-1 is-danger is-light has-text-dark" id="btn_6" onclick="btnClicked(15)">15</button>
-                    <button class="button ml-1 is-danger is-light has-text-dark" id="btn_6" onclick="btnClicked(16)">16</button>
-                    <button class="button ml-1 is-danger is-light has-text-dark" id="btn_6" onclick="btnClicked(17)">17</button>
+                    <button class="button is-focused is-focused is-color has-text-white" id="btn_1" onclick="btnClicked(1)">1</button>
+                    <button class="button ml-1 is-color has-text-white" id="btn_2" onclick="btnClicked(2)">2</button>
+                    <button class="button ml-1 is-color has-text-white" id="btn_3" onclick="btnClicked(3)">3</button>
+                    <button class="button ml-1 is-color has-text-white" id="btn_4" onclick="btnClicked(4)">4</button>
+                    <button class="button ml-1 is-color has-text-white" id="btn_5" onclick="btnClicked(5)">5</button>
+                    <button class="button ml-1 is-color has-text-white" id="btn_6" onclick="btnClicked(6)">6</button>
+                    <button class="button ml-1 is-color has-text-white" id="btn_6" onclick="btnClicked(7)">7</button>
+                    <button class="button ml-1 is-color has-text-white" id="btn_6" onclick="btnClicked(8)">8</button>
+                    <button class="button ml-1 is-color has-text-white" id="btn_6" onclick="btnClicked(9)">9</button>
+                    <button class="button ml-1 is-color has-text-white" id="btn_6" onclick="btnClicked(10)">10</button>
+                    <button class="button ml-1 is-color has-text-white" id="btn_6" onclick="btnClicked(11)">11</button>
+                    <button class="button ml-1 is-color has-text-white" id="btn_6" onclick="btnClicked(12)">12</button>
+                    <button class="button ml-1 is-color has-text-white" id="btn_6" onclick="btnClicked(13)">13</button>
+                    <button class="button ml-1 is-color has-text-white" id="btn_6" onclick="btnClicked(14)">14</button>
+                    <button class="button ml-1 is-color has-text-white" id="btn_6" onclick="btnClicked(15)">15</button>
+                    <button class="button ml-1 is-color has-text-white" id="btn_6" onclick="btnClicked(16)">16</button>
+                    <button class="button ml-1 is-color has-text-white" id="btn_6" onclick="btnClicked(17)">17</button>
                 </div>
             </div>
         </section>
+
+        <div class="modal " id="popup">
+            <div class="modal-background"></div>
+            <div class="modal-card ">
+              <header class="modal-card-head is-white " id="modalHead">
+                <p class="modal-card-title has-text-white" id="title">Modal title</p>
+                <button class="delete" aria-label="close" id="delete"></button>
+              </header>
+              <section class="modal-card-body has-background-light">
+                <p class="image imgModal">
+                    <img id="imgPokemon">
+                  </p>
+              </section>
+              <footer class="modal-card-foot">
+                <button class="button is-primary">Btn1</button>
+                <button class="button is-danger">Btn2</button>
+                <button class="button is-primary">Btn3</button>
+              </footer>
+            </div>
+          </div>
 
     </main>
 
