@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +10,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <title>Pokédex</title>
 </head>
-
 <body>
     <header>
         <nav class="navbar color-nav is-flex is-justify-content-space-between">
@@ -27,20 +25,18 @@
                 <div class="field">
                     <p class="control has-icons-right">
                         <input class="input" type="text" id="search" placeholder="Buscar pokemon">
-                        <span class="icon is-small is-right">
+                        <button class="icon is-right has-background-white borderSearchIcon">
                             <i class="fa fa-search"></i>
-                        </span>
+                        </button>
                     </p>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-
         <section class="section container-color">
             <div class="container">
-                <div class="columns is-multiline" id="listado">
-                    
+                <div class="columns is-multiline" id="listaCards">           
                 </div>
                 <div class="is-flex is-justify-content-center" id="buttons">
                     <button class="button is-focused is-focused is-color has-text-white" id="btn_1" onclick="btnClicked(1)">1</button>
@@ -63,33 +59,27 @@
                 </div>
             </div>
         </section>
-
-        <div class="modal " id="popup">
+        <div class="modal" id="popup">
             <div class="modal-background"></div>
-            <div class="modal-card ">
+            <div class="modal-card sizeModalCard">
               <header class="modal-card-head is-white " id="modalHead">
-                <p class="modal-card-title has-text-white" id="title">Modal title</p>
+                <p class="modal-card-title has-text-white" id="title"></p>
                 <button class="delete" aria-label="close" id="delete"></button>
               </header>
-              <section class="modal-card-body has-background-light">
+              <section class="modal-card-body">
                 <p class="image imgModal">
+                    <img src="https://forum.affinity.serif.com/uploads/monthly_2019_06/1547409938_ScreenShot2019-06-28at9_27_40AM.png.62b5f31f6f09a90c753d25495f6be868.png" alt="" class="imgHeight">
                     <img id="imgPokemon">
-                  </p>
+                </p>
+                <p id="height" class="pHeight"></p>
+                <p id="weight" class="pWeight"></p>
+                <p id="id" class="p5"></p>
               </section>
-              <footer class="modal-card-foot">
-                <button class="button is-primary">Btn1</button>
-                <button class="button is-danger">Btn2</button>
-                <button class="button is-primary">Btn3</button>
-              </footer>
+              <footer class="modal-card-foot" id="footerModal"> </footer>
             </div>
           </div>
-
     </main>
 
     <script src="js/main.js"></script>
-
-
-
 </body>
-
 </html>

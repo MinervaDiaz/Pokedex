@@ -1,40 +1,22 @@
-.container-color{
-    background-color: rgb(255, 255, 255) !important;
-}
-.modalSize{
-    width: 30vw;
-    height: 40vw;
-}
-.is-color{
-    background-color: #f76666dc !important;
-}
-.color-nav{
+nav.color-nav{
     background-color: rgb(252, 170, 47) !important;
 }
-.idPokemon{
-    position:absolute;
-    color: rgb(255, 255, 255);
-    top:-1.1%;
-    font-weight: normal;
+div.container-color{
+    background-color: rgb(255, 255, 255) !important;
 }
-.idPokemon0-9{
-    left:88%
+button.is-color{
+    background-color: #f76666dc !important;
 }
-.idPokemon10-99{
-    left:84%
+
+/*-------------------- SEARCH icon --------------------*/
+.borderSearchIcon{
+    border: none;
+    margin-top: 1%;
+    margin-right: 1%;
 }
-.idPokemon100{
-    left:80%
-}
-.tags{
-    position: absolute;
-    left: 15px;
-    top: 92%;
-    width: 8%;
-    color: white;
-    border-radius: 5px;
-}
-.titleCard{
+
+/*-------------------- cards --------------------*/
+h2.titleCard{
     position: absolute;
     left: -4%;
     top: -5%;
@@ -45,20 +27,35 @@
     border-radius: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.titleCard-10letters{
+h2.titleCard-10letters{
     font-size: 143%;
 }
-.titleCard-14letters{
+h2.titleCard-14letters{
     font-size: 120%;
 }
-.titleCard-18Letters{
+h2.titleCard-18Letters{
     font-size: 111%;
 }
-.titleCard-19Letters{
+h2.titleCard-19Letters{
     width: 80%;
     font-size: 110%;
 }
-.p3{
+p.idPokemon{
+    position:absolute;
+    color: rgb(255, 255, 255);
+    top:-1.1%;
+    font-weight: bold;
+}
+p.idPokemon0-9{
+    left:88%
+}
+p.idPokemon10-99{
+    left:84%
+}
+p.idPokemon100{
+    left:80%
+}
+p.p3{
     color: rgb(152, 152, 152);
     position: absolute;
     left: 6%;
@@ -67,7 +64,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
 }
-.p4{
+p.p4{
     color: rgb(114, 114, 114);
     position: absolute;
     left: 19%;
@@ -75,38 +72,76 @@
     font-size: 79%;
     font-weight: light;
 }
-.p5{
-    color: rgb(0, 0, 0);
-    position: absolute;
-    right: 8%;
-    top: 84%;
-    font-size: 90%;
-    font-weight: light;
+
+/*-------------------- Modal --------------------*/
+div.sizeModalCard{
+    height: 70vh;
 }
-.figureSize{ 
+p.p5{
+    color: rgb(239, 239, 239);
+    position: absolute;
+    right: 10%;
+    top: 4%;
+    font-size: 125%;
+}
+img.imgHeight{
+    position: absolute;
+    left: -55%;
+    top: 39%;
+    transform: rotate(-90deg);
+    width: 50%;
+}
+p.pHeight{
+    position: absolute;
+    background-color: white;
+    color: rgb(233, 101, 13);
+    font-size: 120%;
+    font-weight: normal;
+    font-family: cursive;
+    left: 30%;
+    top: 40%;
+    width:fit-content;
+    padding: 1%;
+    padding-left: 2.5%;
+    padding-right: 2%;
+    text-align: center;
+}
+p.pWeight{
+    position: absolute;
+    color: rgb(24, 139, 168);
+    font-weight: normal;
+    font-family: cursive;
+    left: 47%;
+    top: 70%;
+    font-size: 120%;
+    width:fit-content;
+}
+span.sizeTypes{
+    font-weight: bolder;
+}
+figure.figureSize{ 
     width: 100%;
     height: 100%px;
 }
-.sizeImg{ 
+img.sizeImg{ 
     margin-top:9%;
     margin-bottom: 3%;
     width: 100%;
     height: 100%px;
 }
-.imgModal{ 
-    
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10%;
-    width: 65%;
-    height: 65%px;
+p.imgModal{ 
+    margin-left: 35%;
+    margin-bottom: 4%;
+    width: 45%;
+    height: 45%px;
 }
-/* ----------------------- Colors ------------------------------ */
+
+/* ----------------------- Colors background CARDs ------------------------------ */
 .agua-light{
-    background-color: rgba(110, 186, 186, 0.897) !important;
+    background-color: rgba(114, 187, 187, 0.897) !important;
 }
 .purple-light{
-    background-color: rgba(194, 144, 204, 0.897) !important;
+    background-color: rgba(206, 152, 216, 0.897) !important;
 }
 .orange-light{
     background-color: rgba(209, 178, 162, 0.897) !important;
@@ -121,28 +156,54 @@
     background-color: rgba(197, 144, 144, 0.897) !important;
 }
 .black-light{
-    background-color: rgba(120, 203, 184, 0.897) !important;
+    background-color: rgba(127, 196, 180, 0.897) !important;
 }
 
-
-.border-agua-light{
+/* ----------------------- Colors border CARDs ------------------------------ */
+div.border-agua-light{
     border: 2px solid rgb(0, 255, 255, 0.623);
 }
-.border-purple-light{
+div.border-purple-light{
     border: 2px solid  rgba(217, 0, 255, 0.514);
 }
-.border-orange-light{
+div.border-orange-light{
     border: 2px solid  rgba(255, 216, 44, 0.514);
 }
-.border-green-light{
+div.border-green-light{
     border: 2px solid rgb(72, 255, 0, 0.514);
 }
-.border-blue-light{
+div.border-blue-light{
     border: 2px solid rgb(0, 8, 255, 0.514);
 }
-.border-red-light{
+div.border-red-light{
     border: 2px solid rgb(255, 1, 1, 0.514);
 }
-.border-black-light{
+div.border-black-light{
     border: 2px solid rgb(73, 73, 73, 0.514);
+}
+
+/* ----------------------- Colors types Modal ------------------------------ */
+span.typeGrass{
+    background-color: rgb(52, 153, 52) !important;
+}
+span.typePoison{
+    background-color: rgb(64, 146, 149) !important;
+}
+span.typeBug{
+    background-color: rgb(127, 95, 139) !important;
+}
+span.typeFire{
+    background-color: rgb(172, 71, 71) !important;
+}
+span.typeFlying{
+    background-color: rgb(162, 165, 72) !important;
+}
+span.typeWater{
+    background-color: rgb(189, 71, 150) !important;
+}
+span.typeNormal{
+    background-color: rgb(162, 117, 83) !important;
+}
+span.typeGround{
+    background-color: rgb(127, 170, 113) !important;
 }
